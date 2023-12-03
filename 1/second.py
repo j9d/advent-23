@@ -20,7 +20,7 @@ nums = {
     "nine": 9,
 }
 
-def find_num(input: str, reverse: bool):
+def find_num(input: str, reverse: bool) -> int:
     if reverse:
         results = {term: input.rfind(term) for term in nums.keys()}
         return nums[max(results, key=results.get)]
